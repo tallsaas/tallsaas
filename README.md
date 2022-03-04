@@ -1,5 +1,5 @@
 # tallsaas/tallsaas
-Layering an opinionated workflow on top of TALL Stack for **quickly** building SaaS products with code that is **readable**, **realiable**, and **ready to scale**.
+Layering an opinionated workflow on top of TALL Stack for **quickly** building a SaaS product with code that is **readable**, **realiable**, and **ready to scale**.
 
 ## Setup
 
