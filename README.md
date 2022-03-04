@@ -11,7 +11,7 @@ Layering an opinionated workflow on top of TALL Stack for **quickly** building a
 
 3. Run `composer tallsaas`
 
-4. Move into your new office via `cd _tallsaas` - this is where the magic happens
+4. Move into your new office via `cd _tallsaas` (this is where the magic happens)
 
 
 ## Workflow
