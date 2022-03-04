@@ -1,4 +1,4 @@
-# tallsaas
+# tallsaas/tallsaas
 A TALL Stack template for lighting-fast SaaS prototyping.
 
 ## Setup
