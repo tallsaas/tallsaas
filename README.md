@@ -1,5 +1,5 @@
 # tallsaas/tallsaas
-A TALL Stack template for lighting-fast SaaS prototyping.
+Layering an opinionated workflow on top of TALL Stack for **quickly** building SaaS products with code that is **readable**, **realiable**, and **ready to scale**.
 
 ## Setup
 
