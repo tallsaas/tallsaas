@@ -5,9 +5,7 @@ Layering an opinionated workflow on top of TALL Stack for **quickly** building a
 
 1. Get a brand new install going for Laravel on [maxOS](https://laravel.com/docs/9.x/installation#getting-started-on-macos), [Windows](https://laravel.com/docs/9.x/installation#getting-started-on-windows), or [Linux](https://laravel.com/docs/9.x/installation#getting-started-on-linux)
 
-2. Install tallsaas!
-
-`composer require (coming soon...)`
+2. Install tallsaas via `composer require tallsaas/tallsaas`
 
 3. Run `composer tallsaas`
 
