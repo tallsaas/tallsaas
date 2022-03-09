@@ -50,7 +50,7 @@ class Component extends LaravelViewComponent
     endif;
   }
 
-  public function attributes()
+  public function attributeCollection()
   {
     return new AttributeCollection([
       'class'  => $this->class->string(),
