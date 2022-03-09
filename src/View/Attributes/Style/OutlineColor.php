@@ -2,7 +2,7 @@
 
 namespace TallSaas\View\Attributes\Style;
 
-class OutlineColor
+class Outline extends Color
 {
   //
 }

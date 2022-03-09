@@ -2,7 +2,7 @@
 
 namespace TallSaas\View\Attributes\Style;
 
-class BorderRightColor
+class BorderRight extends Color
 {
   //
 }

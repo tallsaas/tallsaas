@@ -2,7 +2,7 @@
 
 namespace TallSaas\View\Attributes\Style;
 
-class TextDecorationColor
+class TextDecoration extends Color
 {
   //
 }

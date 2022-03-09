@@ -2,7 +2,7 @@
 
 namespace TallSaas\View\Attributes\Style;
 
-class ColumnRuleColor
+class ColumnRule extends Color
 {
   //
 }

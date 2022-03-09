@@ -2,7 +2,7 @@
 
 namespace TallSaas\View\Attributes\Style;
 
-class CaretColor
+class Caret extends Color
 {
   //
 }

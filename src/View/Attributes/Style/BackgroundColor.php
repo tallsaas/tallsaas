@@ -2,7 +2,7 @@
 
 namespace TallSaas\View\Attributes\Style;
 
-class BackgroundColor
+class Background extends Color
 {
   //
 }
