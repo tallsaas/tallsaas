@@ -1,0 +1,45 @@
+{
+  "name": "tallsaas/tallsaas",
+  "description": "A TALL Stack workflow",
+  "keywords": [
+      "saas",
+      "tailwind",
+      "alpinejs",
+      "laravel",
+      "livewire"
+  ],
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Joshua Anderton",
+          "email": "hey@joshuaanderton.ca"
+      }
+  ],
+  "require": {
+      "php": "^8.0",
+      "illuminate/support": "^8.67|^9.0"
+  },
+  "require-dev": {
+      "phpunit/phpunit": "^9.3"
+  },
+  "autoload": {
+      "psr-4": {
+          "TallSaas\\": "src"
+      }
+  },
+  "autoload-dev": {
+      "psr-4": {
+          "TallSaas\\Tests\\": "tests"
+      }
+  },
+  "config": {
+      "sort-packages": true
+  },
+  "extra": {
+      "laravel": {
+          "providers": [
+              "TallSaas\\Providers\\TallSaasServiceProvider"
+          ]
+      }
+  }
+}
