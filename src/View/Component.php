@@ -2,45 +2,45 @@
 
 namespace TallSaas\View;
 
-use TallSaas\View\Attributes\TagName;
-use TallSaas\View\Attributes\ClassName;
-use TallSaas\View\Attributes\ClassNameTrait;
+use TallSaas\View\Attributes\Tag;
+use TallSaas\View\Attributes\TagTrait;
+use TallSaas\View\Attributes\ClassCollection;
+use TallSaas\View\Attributes\ClassTrait;
 use TallSaas\View\Attributes\Style;
 use TallSaas\View\Attributes\StyleTrait;
-use TallSaas\View\Attributes\TagNameTrait;
 use TallSaas\View\Attributes\ForTrait;
 use TallSaas\View\Attributes\IfUnlessTrait;
 use TallSaas\View\Attributes\ClickTrait;
-use TallSaas\View\ComponentCollection;
 use TallSaas\View\AttributeCollection;
+
+use Illuminate\Support\Str;
 
 use Illuminate\View\Component as LaravelViewComponent;
 
 class Component extends LaravelViewComponent
 {
-  use StyleTrait, ClassNameTrait, TagNameTrait, ForTrait, IfUnlessTrait, ClickTrait;
-
-  public string $viewPath;
+  use StyleTrait, ClassTrait, TagTrait, ForTrait, IfUnlessTrait, ClickTrait;
 
   public function render()
   {
-    //
+    $componentName = Str::lower(class_basename($this::class));
+    return view("components.{$componentName}");
   }
 
   public function __construct(
-    TagName|string $tagName = null, 
-    ClassName|array|string $className = null, 
-    Style|array|string $style = null
+    string $tag = null, 
+    array|string $class = null, 
+    array|string $style = null
   )
   {
-    if ($tagName) :
-      $this->tagName($tagName);
+    if ($tag) :
+      $this->tag($tag);
     endif;
 
-    if ($className) :
-      $this->className($className);
+    if ($class) :
+      $this->classCollect($class);
     else :
-      $this->className = new ClassName;
+      $this->class = new ClassCollection;
     endif;
 
     if ($style) :
@@ -53,7 +53,7 @@ class Component extends LaravelViewComponent
   public function attributes()
   {
     return new AttributeCollection([
-      'class'  => $this->className->string(),
+      'class'  => $this->class->string(),
       'style'  => $this->style->string(),
 
       // Alpine & Livewire
@@ -63,37 +63,4 @@ class Component extends LaravelViewComponent
       //...
     ]);
   }
-
-  // Could pass child elements to this one
-  // and print together
-  public function printWithChildren(...$params): string
-  {
-    if (count($params)) :
-      new ComponentCollection($params);
-    endif;
-
-    return $html;
-  }
-
-  public function print(): string 
-  {
-    if ($this->for->count()) :
-      $component = $this;
-      $componentType = $this::class;
-
-      $html.= $this->for->map(function($item) use ($component) {
-        $forComponent = $component;
-        $forComponent->data = $item;
-
-        return $forComponent->print();
-      });
-    endif;
-
-    return $this->htmlTag(
-      $this->attributes(),
-      $content = '',
-      $children = null
-    );
-  }
-
 }

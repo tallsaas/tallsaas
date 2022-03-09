@@ -6,7 +6,7 @@ use Obsidian\Exceptions\Web\Components\Attributes\TagNameException;
 
 use Illuminate\Support\Collection;
 
-enum TagName 
+enum Tag 
 {
   public static function get(string $find): self
   {

@@ -4,8 +4,8 @@ namespace TallSaas\View\Attributes;
 
 trait IfUnlessTrait
 {
-  public string $showIf;
-  public string $hideIf;
+  public $showIf;
+  public $hideIf;
 
   public function if(string $variableName): void
   {

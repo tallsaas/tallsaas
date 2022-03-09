@@ -4,7 +4,7 @@ namespace TallSaas\View\Attributes;
 
 trait ClickTrait
 {
-  public string $click;
+  public $click;
 
   public function click(string $eventName): void
   {

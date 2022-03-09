@@ -6,7 +6,7 @@ use Iluminate\Support\Collection;
 
 trait ForTrait
 {
-  public Collection $for;
+  public $for;
 
   // <List for="$users, User::class"><Avatar src="$user->image_url"></List>
   public function for(Collection|array $collection, string $modelClass): void
