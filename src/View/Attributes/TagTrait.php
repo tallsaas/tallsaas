@@ -7,7 +7,7 @@ use TallSaas\View\ComponentCollection;
 
 trait TagTrait
 {
-  public Tag $tag = Tag::div;
+  public $tag;
 
   private array $voidElements = [
     'area',
